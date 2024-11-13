@@ -1,4 +1,4 @@
-# Official Repository for FORTUNE: A Negative Memory Overhead Hardware-Agnostic Fault TOleRance TechniqUe in DNNs
+# FORTUNE: A Negative Memory Overhead Hardware-Agnostic Fault TOleRance TechniqUe in DNNs
 
 Link to the paper: .....................
 
