@@ -57,7 +57,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
    ```bash
       @article{fortune2024,
         title={FORTUNE: A Negative Memory Overhead Hardware-Agnostic Fault TOleRance TechniqUe in DNNse},
-        author={Samira Nazari,Mahdi Taheri,Ali Azarpeyvand,Mohsen Afsharchi,Tara Ghasempouri,Christian Herglotz,Masoud Daneshtalab,Maksim                      Jenihhin},
+        author={Samira Nazari,Mahdi Taheri,Ali Azarpeyvand,Mohsen Afsharchi,Tara Ghasempouri,Christian Herglotz,Masoud Daneshtalab,Maksim Jenihhin},
         journal={Authorea Preprints},
         year={2024}
       }    
