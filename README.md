@@ -47,7 +47,7 @@ To install compatible version of quanto, follow the instructions at https://gith
    python3 q0-example.py
 
 6. **View Results**:   
-   The script outputs the experiment results in the console.
+   The script outputs the experiment results in the console and produces some files for accuracy and probability values.
 
 ## Bibtex
 
