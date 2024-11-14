@@ -19,7 +19,6 @@ This is the official repository for the implementation of FORTUNE: A Negative Me
    ```bash
    pip install -r requirements.txt
 
-
 2. **Download Pretrained Weights**:    
    Download the pretrained weights and parameters from the following link: https://drive.google.com/drive/folders/1R_EsvjougYKuMO2S44ArEI4xgYWuJ-bD?usp=sharing.    
    These files include:
@@ -38,7 +37,6 @@ This is the official repository for the implementation of FORTUNE: A Negative Me
    │       │   └── state_dicts/
    │       │       ├── vgg11_bn.pt/
    │       ├── qvgg11-0-7.pth/
-
 
 5. **Run the Scripts**:   
    Run the q0-example.py files to view the results.  These scripts will use the weights and parameters and output the results of the experiments. 'example' should be replaced by the appropriate name in each folder.     
