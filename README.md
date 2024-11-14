@@ -43,8 +43,8 @@ This is the official repository for the implementation of FORTUNE: A Negative Me
 4. **Run the Scripts**:   
    Run the q.....py files to view the results.  These scripts will use the weights and parameters and output the results of the experiments.   
 
-```bash
-python q_example.py
+   ```bash
+   python q_example.py
 
 5. **View Results**:   
    The script outputs the experiment results in the console.
