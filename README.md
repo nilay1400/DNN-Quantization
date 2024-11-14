@@ -19,6 +19,8 @@ This is the official repository for the implementation of FORTUNE: A Negative Me
    ```bash
    pip install -r requirements.txt
 
+   To install compatible version of quanto, follow the instructions at https://github.com/nilay1400/quanto-modified.
+
 2. **Download Pretrained Weights**:    
    Download the pretrained weights and parameters from the following link: https://drive.google.com/drive/folders/1R_EsvjougYKuMO2S44ArEI4xgYWuJ-bD?usp=sharing.    
    These files include:
