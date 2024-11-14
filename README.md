@@ -27,9 +27,10 @@ This is the official repository for the implementation of FORTUNE: A Negative Me
    - 32-bit floating point weights.
    - Weights with different quantization types used in the experiments of the paper.
 
-3. Place Weights in the Corresponding Folders:
-After downloading, place each file in its corresponding folder as shown below:
+3. **Place Weights in the Corresponding Folders**:   
+   After downloading, place each file in its corresponding folder as shown below:   
 
+```bash
 ├── VGG-11/
 │   ├── models/
 │   ├── state-dicts/
@@ -37,12 +38,14 @@ After downloading, place each file in its corresponding folder as shown below:
 │   ├── quantized_type2/
 │   └── ...
 
-4. Run the Scripts:
-Run the q.....py files to view the results:
+4. **Run the Scripts**:   
+   Run the q.....py files to view the results.  These scripts will use the weights and parameters and output the results of the experiments.   
+
+```bash
 python q_example.py
 
-5. View Results:
-The script outputs the experiment results in the console.
+5. **View Results**:   
+   The script outputs the experiment results in the console.
 
 
 ## License
