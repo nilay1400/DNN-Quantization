@@ -20,11 +20,12 @@ This is the official repository for the implementation of FORTUNE: A Negative Me
    pip install -r requirements.txt
 
 
-2. **Download Pretrained Weights**:
-   Download the pretrained weights and parameters from the following link: https://drive.google.com/drive/folders/1R_EsvjougYKuMO2S44ArEI4xgYWuJ-bD?usp=sharing These files include:
+2. **Download Pretrained Weights**:    
+   Download the pretrained weights and parameters from the following link: https://drive.google.com/drive/folders/1R_EsvjougYKuMO2S44ArEI4xgYWuJ-bD?usp=sharing
+   These files include:
 
-32-bit floating point weights.
-Weights with different quantization types used in the experiments of the paper.
+   - 32-bit floating point weights.
+   - Weights with different quantization types used in the experiments of the paper.
 
 3. Place Weights in the Corresponding Folders:
 After downloading, place each file in its corresponding folder as shown below:
