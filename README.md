@@ -12,9 +12,13 @@ This is the official repository for the implementation of FORTUNE: A Negative Me
 
 
 ## Usage
-1. Install Required Packages:
-First, ensure all required packages are installed. You can do this by running:
-pip install -r requirements.txt
+
+1. **Install Required Packages**:  
+   First, ensure all required packages are installed. You can do this by running:
+
+   ```bash
+   pip install -r requirements.txt
+
 
 2. Download Pretrained Weights:
 Download the pretrained weights and parameters from the following link: https://drive.google.com/drive/folders/1R_EsvjougYKuMO2S44ArEI4xgYWuJ-bD?usp=sharing These files include:
