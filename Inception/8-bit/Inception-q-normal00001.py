@@ -25,9 +25,6 @@ import csv
 acc_dict = {"noFI": [], "Accuracy": []}
 csv_acc = "inception-normal-fi50-ber00001.csv"
 
-# fault_dict = {"Iteration": [], "Layer": [], "Index": [], "Bit": []}
-# csv_fault = "resnet18_fault_list50_ber003.csv"
-
 output_results_file = open("output_inception_normal_ber00001", "w")
 output_results = csv.DictWriter(output_results_file,
                                         [
@@ -49,9 +46,6 @@ BER = 0.00001
 #fault_list = pandas.read_csv('resnet18_fault_list50_ber0001.csv')
 
 model = torch.load('qinception-normal.pth')
-# model = inception_v3(pretrained=True)
-
-#model.eval()
 
 def val_dataloader(mean = (0.4914, 0.4822, 0.4465), std = (0.2471, 0.2435, 0.2616)):
 
@@ -86,15 +80,6 @@ evens = list(range(0, len(dataset), 10))
 trainset_1 = torch.utils.data.Subset(dataset, evens)
 
 data = val_dataloader()
-
-# print(model)
-# print(model.fc.weight._data)
-# print(model.features[25].weight._data)
-# 0, 4, 8, 11, 15, 18, 22, 25
-# print(model.classifier[0].weight)
-# 0, 3, 6
-
-# layer = 'features[0]'
 
 # Function to dynamically get the attribute
 def get_nested_attr(obj, attr):
@@ -192,78 +177,9 @@ with_padding = ['Mixed_6b.branch7x7_2.conv',
                 'Mixed_7c.branch3x3_2b.conv', 'Mixed_7c.branch3x3dbl_2.conv',
                 'Mixed_7c.branch3x3dbl_3a.conv', 'Mixed_7c.branch3x3dbl_3b.conv',]
 
-# layer_count = 0
 original_weights = []
 for i in layer_list:
    original_weights.append(get_nested_attr(model, i).weight._data)
-#    layer_count += 1
-
-# layer_list = ['conv1', 'layer1[0].conv1', 'layer1[0].conv2', 'layer1[1].conv1', 'layer1[1].conv2', 'layer2[0].conv1', 'layer2[0].conv2', 'layer2[1].conv1', 'layer2[1].conv2', 'layer3[0].conv1', 'layer3[0].conv2', 'layer3[1].conv1', 'layer3[1].conv2', 'layer4[0].conv1', 'layer4[0].conv2', 'layer4[1].conv1', 'layer4[1].conv2', 'fc']
-# layer = random.choice(layer_list)
-# print(layer)
-# # layer = 'Conv2d_1a_3x3.conv'
-# layer_weights = get_nested_attr(model, layer).weight._data.numpy()
-
-# # # Plot the distribution of weights
-# plt.hist(layer_weights.flatten(), bins=50)
-# plt.xlabel('Weight Value')
-# plt.ylabel('Frequency')
-# plt.title('Distribution of Weights')
-# plt.show()
-
-# import timeit
-# correct = 0
-# total = 0
-
-# model.eval()
-# start_time = timeit.default_timer()
-# with torch.no_grad():
-#    for iteraction, (images, labels) in tqdm(enumerate(data), total=len(data)):
-#        images, labels = images.to("cpu"), labels.to("cpu")
-#        outputs = model(images)
-#        _, predicted = torch.max(outputs.data, 1)
-#        total += labels.size(0)
-#        correct += (predicted == labels).sum().item()
-# print(timeit.default_timer() - start_time)
-# print('Accuracy of the network on the 10000 test images: %.4f %%' % (
-#    100 * correct / total))
-
-    
-# # print(model.conv1.weight)
-
-# quanto.quantize(model, weights=quanto.qint8, activations=None)
-# quanto.freeze(model)
-# torch.save(model, 'qinception-0-63.pth')
-
-# torch.load('qresnet-80-127.pth')
-
-#print(model.conv1.weight)
-
-# b = io.BytesIO()
-# torch.save(model.state_dict(), b)
-# b.seek(0)
-# state_dict2 = torch.load(b)
-
-
-# loaded_state_dict2 = torch.load('qresnet-80-127.pth')
-# model.load_state_dict(loaded_state_dict2)
-
-# import timeit
-# correct = 0
-# total = 0
-
-# model.eval()
-# start_time = timeit.default_timer()
-# with torch.no_grad():
-#     for iteraction, (images, labels) in tqdm(enumerate(data), total=len(data)):
-#         images, labels = images.to("cpu"), labels.to("cpu")
-#         outputs = model(images)
-#         _, predicted = torch.max(outputs.data, 1)
-#         total += labels.size(0)
-#         correct += (predicted == labels).sum().item()
-# print(timeit.default_timer() - start_time)
-# print('Accuracy of the golden quantized network on the 10000 test images: %.4f %%' % (
-#     100 * correct / total))
 
 def no_faults():
     number =[]
@@ -296,48 +212,27 @@ def generate_fault_list(n):
         fault_dict['Bit'].append(bit)
 
 def test(n):
-    # model = torch.load('vgg-q-normal.pth')
     layer_count = 0
     for i in layer_list:
         get_nested_attr(model, i).weight._data = original_weights[layer_count] 
         layer_count += 1
-    # loaded_state_dict2 = torch.load('qresnet-80-127.pth')
 
-
-# # model2 = resnet50(pretrained=True)
-# print(model.conv1.weight)
-    # model.load_state_dict(loaded_state_dict2)
-    # print(model.conv1.weight._data)
     p = 0
     #int(BER * n)
     for t in range(int(BER * n)):
-        #layer = fault_list['Layer'][k+t]
         
         layer = random.choice(layer_list)
-        # layer = 'Mixed_7b.branch3x3dbl_3b.conv'
-        # print(layer)
-        
+ 
         weights = get_nested_attr(model, layer).weight._data
         # if layer in first : fi = FI(weights)
         # if layer in second : fi = FI2(weights)
         # if layer in with_padding : fi = FI3(weights)
         fi = FI3(weights)
         index, bit = fi.fault_position()
-        #index = fault_list['Index'][k+t]
-        #bit = fault_list['Bit'][k+t]
         new_weights = fi.inject(index, bit)
         get_nested_attr(model, layer).weight._data = new_weights
         p += 1
         #print("which fault", k, p)
-
-#layer_weights = model.conv1.weight._data.numpy()
-
-# Plot the distribution of weights
-#plt.hist(layer_weights.flatten(), bins=50)
-#plt.xlabel('Weight Value')
-#plt.ylabel('Frequency')
-#plt.title('Distribution of Weights')
-#plt.show()
 
 
     import timeit
@@ -376,10 +271,7 @@ for k in range(Sufficient_no_faults):
     accuracy = test(n)
     acc_dict["Accuracy"].append(accuracy)
     acc_dict["noFI"].append(k)
-    # generate_fault_list(n)
-
-# data = pandas.DataFrame(fault_dict)
-# data.to_csv(csv_fault)
+ 
 data = pandas.DataFrame(acc_dict)
 data.to_csv(csv_acc)
 avg_accuracy = sum(acc_dict["Accuracy"])/len(acc_dict["Accuracy"])
