@@ -16,8 +16,8 @@ This is the official repository for the implementation of FORTUNE: A Negative Me
 1. **Install Required Packages**:  
    First, ensure all required packages are installed. You can do this by running:
 
-   ```bash
-   pip install -r requirements.txt
+      ```bash
+      pip install -r requirements.txt
 
    To install compatible version of quanto, follow the instructions at https://github.com/nilay1400/quanto-modified.
 
