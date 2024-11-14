@@ -50,6 +50,9 @@ To install compatible version of quanto, follow the instructions at https://gith
 6. **View Results**:   
    The script outputs the experiment results in the console and produces some files for accuracy and probability values.
 
+## License
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
 ## Bibtex
    ```bash
       @article{fortune2024,
@@ -59,7 +62,4 @@ To install compatible version of quanto, follow the instructions at https://gith
         year={2024}
       }    
 
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
