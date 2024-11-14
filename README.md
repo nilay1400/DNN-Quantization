@@ -30,13 +30,13 @@ This is the official repository for the implementation of FORTUNE: A Negative Me
 3. **Place Weights in the Corresponding Folders**:   
    After downloading, place each file in its corresponding folder as shown below:   
 
-```bash
-├── VGG-11/
-│   ├── models/
-│   ├── state-dicts/
-│   ├── quantized_type1/
-│   ├── quantized_type2/
-│   └── ...
+   ```bash
+   ├── VGG-11/
+   │   ├── models/
+   │   ├── state-dicts/
+   │   ├── quantized_type1/
+   │   ├── quantized_type2/
+   │   └── ...
 
 
 
