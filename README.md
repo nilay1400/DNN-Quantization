@@ -38,6 +38,8 @@ This is the official repository for the implementation of FORTUNE: A Negative Me
 │   ├── quantized_type2/
 │   └── ...
 
+
+
 4. **Run the Scripts**:   
    Run the q.....py files to view the results.  These scripts will use the weights and parameters and output the results of the experiments.   
 
