@@ -57,7 +57,8 @@ To install compatible version of quanto, follow the instructions at https://gith
      author={Samira Nazari,Mahdi Taheri,Ali Azarpeyvand,Mohsen Afsharchi,Tara Ghasempouri,Christian Herglotz,Masoud Daneshtalab,Maksim Jenihhin},
      journal={Authorea Preprints},
      year={2024}
-   }
+   }   
+
 
 ## License
 
