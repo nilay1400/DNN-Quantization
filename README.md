@@ -61,5 +61,3 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
         journal={Authorea Preprints},
         year={2024}
       }    
-
-
