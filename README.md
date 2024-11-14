@@ -1,6 +1,7 @@
 # FORTUNE: A Negative Memory Overhead Hardware-Agnostic Fault TOleRance TechniqUe in DNNs
 
-Link to the paper: .....................
+Link to the paper:     
+https://www.techrxiv.org/users/777197/articles/1237379-fortune-a-negative-memory-overhead-hardware-agnostic-fault-tolerance-technique-in-dnns
 
 This is the official repository for the implementation of FORTUNE: A Negative Memory Overhead Hardware-Agnostic Fault TOleRance TechniqUe in DNNs. This paper presents a hardware-agnostic fault tolerance technique for DNNs that leverages quantization to enhance reliability without significant performance overhead.
 
