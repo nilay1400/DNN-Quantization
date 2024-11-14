@@ -28,25 +28,27 @@ This is the official repository for the implementation of FORTUNE: A Negative Me
    - Weights with different quantization types used in the experiments of the paper.
 
 3. **Place Weights in the Corresponding Folders**:   
-   After downloading, place each file in its corresponding folder as shown below:   
+   After downloading, place each file in its corresponding folder as shown below:
+   (The path is shown for 3-bit VGG-11 as an example.)   
 
    ```bash
    ├── VGG-11/
-   │   ├── models/
-   │   ├── state-dicts/
-   │   ├── quantized_type1/
-   │   ├── quantized_type2/
-   │   └── ...
+   │   └── 3-bit/
+   │       ├── models/
+   │       │   └── state_dicts/
+   │       │       ├── vgg11_bn.pt/
+   │       ├── qvgg11-0-7.pth/
 
 
 
-4. **Run the Scripts**:   
+
+5. **Run the Scripts**:   
    Run the q0-example.py files to view the results.  These scripts will use the weights and parameters and output the results of the experiments. 'example' should be replaced by the appropriate name in each folder.     
 
    ```bash
    python3 q0-example.py
 
-5. **View Results**:   
+6. **View Results**:   
    The script outputs the experiment results in the console.
 
 
