@@ -21,7 +21,7 @@ This is the official repository for the implementation of FORTUNE: A Negative Me
 
 
 2. **Download Pretrained Weights**:    
-   Download the pretrained weights and parameters from the following link: https://drive.google.com/drive/folders/1R_EsvjougYKuMO2S44ArEI4xgYWuJ-bD?usp=sharing
+   Download the pretrained weights and parameters from the following link: https://drive.google.com/drive/folders/1R_EsvjougYKuMO2S44ArEI4xgYWuJ-bD?usp=sharing.    
    These files include:
 
    - 32-bit floating point weights.
@@ -41,10 +41,10 @@ This is the official repository for the implementation of FORTUNE: A Negative Me
 
 
 4. **Run the Scripts**:   
-   Run the q.....py files to view the results.  These scripts will use the weights and parameters and output the results of the experiments.   
+   Run the q0-example.py files to view the results.  These scripts will use the weights and parameters and output the results of the experiments. 'example' should be replaced by the appropriate name in each folder.     
 
    ```bash
-   python q_example.py
+   python3 q0-example.py
 
 5. **View Results**:   
    The script outputs the experiment results in the console.
