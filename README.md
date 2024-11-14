@@ -14,4 +14,7 @@ This is the official repository for the implementation of FORTUNE: A Negative Me
 ## Usage
 ..........
 
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
