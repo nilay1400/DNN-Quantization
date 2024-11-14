@@ -40,8 +40,6 @@ This is the official repository for the implementation of FORTUNE: A Negative Me
    │       ├── qvgg11-0-7.pth/
 
 
-
-
 5. **Run the Scripts**:   
    Run the q0-example.py files to view the results.  These scripts will use the weights and parameters and output the results of the experiments. 'example' should be replaced by the appropriate name in each folder.     
 
