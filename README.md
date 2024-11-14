@@ -51,7 +51,13 @@ To install compatible version of quanto, follow the instructions at https://gith
    The script outputs the experiment results in the console and produces some files for accuracy and probability values.
 
 ## Bibtex
-
+   ```bash
+   @article{fortune2024,
+     title={FORTUNE: A Negative Memory Overhead Hardware-Agnostic Fault TOleRance TechniqUe in DNNse},
+     author={Samira Nazari,Mahdi Taheri,Ali Azarpeyvand,Mohsen Afsharchi,Tara Ghasempouri,Christian Herglotz,Masoud Daneshtalab,Maksim Jenihhin},
+     journal={Authorea Preprints},
+     year={2024}
+   }
 
 ## License
 
